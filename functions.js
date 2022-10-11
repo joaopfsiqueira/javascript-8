@@ -7,10 +7,13 @@ const pessoa =
 }
 
 
-function atualizaPessoa() {
-    pessoa.sobrenome = "Siqueira" 
-    pessoa.anoNascimento = new Date().getFullYear() - pessoa.idade
+function atualizaPessoa(sobrenome, anoAtual){
+    pessoa.sobrenome = sobrenome
+    pessoa.anoNascimento = anoAtual - pessoa.idade
     return console.log(pessoa)
 }
 
-atualizaPessoa()
+atualizaPessoa("Siqueira", new Date().getFullYear())
+
+
+return atualizaPessoa;
